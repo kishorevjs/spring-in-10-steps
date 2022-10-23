@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 public class XmlPersonDAO {
 
     @Autowired
-    private XmlJdbcConnection xmlJdbcConnection;
+    XmlJdbcConnection xmlJdbcConnection;
 
     public XmlJdbcConnection getXmlJdbcConnection() {
         return xmlJdbcConnection;
