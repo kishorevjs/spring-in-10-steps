@@ -4,10 +4,8 @@ import com.in28minutes.spring.basics.springin10steps.xml.XmlJdbcConnection;
 import com.in28minutes.spring.basics.springin10steps.xml.XmlPersonDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-@Configuration
 public class SpringIn10StepsXmlApplication {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SpringIn10StepsXmlApplication.class);
