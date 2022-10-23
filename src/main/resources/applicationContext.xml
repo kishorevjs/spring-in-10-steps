@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-           http://www.springframework.org/schema/beans/spring-beans.xsd">
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="xmlJdbcConnection" class="com.in28minutes.spring.basics.springin10steps.xml.XmlJdbcConnection">
-        <!-- collaborators and configuration for this bean go here -->
+    <context:component-scan base-package="com.in28minutes.spring.basics"/>
+
+    <!--<bean id="xmlJdbcConnection" class="com.in28minutes.spring.basics.springin10steps.xml.XmlJdbcConnection">
+        &lt;!&ndash; collaborators and configuration for this bean go here &ndash;&gt;
     </bean>
 
     <bean id="xmlPersonDao" class="com.in28minutes.spring.basics.springin10steps.xml.XmlPersonDAO">
         <property name="xmlJdbcConnection" ref="xmlJdbcConnection"/>
-        <!-- collaborators and configuration for this bean go here -->
-    </bean>
+        &lt;!&ndash; collaborators and configuration for this bean go here &ndash;&gt;
+    </bean>-->
 
     <!-- more bean definitions go here -->
 

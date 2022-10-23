@@ -4,9 +4,10 @@ import com.in28minutes.spring.basics.springin10steps.xml.XmlJdbcConnection;
 import com.in28minutes.spring.basics.springin10steps.xml.XmlPersonDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+@Configuration
 public class SpringIn10StepsXmlApplication {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SpringIn10StepsXmlApplication.class);
@@ -15,6 +16,8 @@ public class SpringIn10StepsXmlApplication {
 
         ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         System.out.println("Classpath value is "+ classPathXmlApplicationContext);
+
+        LOGGER.info("Beans Loaded --> {}", (Object) classPathXmlApplicationContext.getBeanDefinitionNames());
 
         XmlPersonDAO xmlPersonDAO= classPathXmlApplicationContext.getBean(XmlPersonDAO.class);
         System.out.println("XmlPersonDAO value is "+ xmlPersonDAO);
