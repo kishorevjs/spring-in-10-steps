@@ -18,7 +18,3 @@ public class SomeBusinessImpl {
         return greatestValue;
     }
 }
-
-interface DataService{
-    int[] retriveAllData();
-}
